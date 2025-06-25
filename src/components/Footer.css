@@ -1,0 +1,17 @@
+.footer {
+  background: #143877;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10vw;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer a {
+  color: #fff; opacity: 0.8; text-decoration: underline;
+}
+.footer a:hover {
+  opacity: 1;
+}

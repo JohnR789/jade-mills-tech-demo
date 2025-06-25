@@ -1,0 +1,26 @@
+.about {
+  padding: 90px 10vw 60px 10vw;
+  background: #f7f8fa;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #143877;
+}
+.about-content {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #222;
+}
+.press-logos {
+  margin-top: 35px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.press-logos img {
+  height: 36px; width: auto; filter: grayscale(100%);
+}
