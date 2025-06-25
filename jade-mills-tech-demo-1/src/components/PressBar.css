@@ -1,0 +1,57 @@
+.press-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #f6d9ad 0%, #eeb88d 100%);
+  padding: 20px 0 16px 0;
+  margin: 0 auto 32px auto;
+  box-shadow: 0 2px 8px rgba(102, 51, 0, 0.07);
+  border-radius: 0 0 22px 22px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 24px;
+}
+
+.press-bar-label {
+  font-size: 1.08rem;
+  color: #944b0f;
+  font-weight: 700;
+  margin-right: 24px;
+  letter-spacing: 1px;
+  font-family: 'Inter', Arial, sans-serif;
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  padding: 6px 18px;
+}
+
+.press-bar-logos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.press-bar-logos img {
+  height: 36px;
+  width: auto;
+  filter: grayscale(100%) contrast(1.1) brightness(0.94);
+  opacity: 0.88;
+  transition: opacity 0.2s, filter 0.2s;
+}
+.press-bar-logos img:hover {
+  opacity: 1;
+  filter: grayscale(30%) contrast(1.13) brightness(1.1);
+}
+@media (max-width: 600px) {
+  .press-bar-label {
+    margin-right: 10px;
+    font-size: 0.95rem;
+    padding: 4px 10px;
+  }
+  .press-bar-logos img {
+    height: 26px;
+  }
+  .press-bar {
+    gap: 12px;
+  }
+}

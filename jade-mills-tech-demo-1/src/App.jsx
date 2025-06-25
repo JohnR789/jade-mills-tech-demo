@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Listings from './components/Listings';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Listings from "./pages/Listings";
+import Press from "./pages/Press";
+import Contact from "./pages/Contact";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./App.css";
 
 function App() {
   useEffect(() => {
@@ -15,16 +17,20 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Hero />
-      <About />
-      <Listings />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/listings" element={<Listings />} />
+        <Route path="/press" element={<Press />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
 export default App;
+
 

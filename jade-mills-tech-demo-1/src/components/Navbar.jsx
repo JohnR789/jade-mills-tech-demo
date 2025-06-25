@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="logo"><img src="/logo.png" alt="Logo" /> Jade Mills Demo</div>
-      <ul className={`nav-links ${open ? 'active' : ''}`}>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#listings">Listings</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <div className="logo">
+        <img src="/logo.png" alt="Logo" /> Autumn Realty
+      </div>
+      <ul className={`nav-links ${open ? "active" : ""}`}>
+        <li><Link to="/" onClick={() => setOpen(false)}>Home</Link></li>
+        <li><Link to="/about" onClick={() => setOpen(false)}>About</Link></li>
+        <li><Link to="/listings" onClick={() => setOpen(false)}>Listings</Link></li>
+        <li><Link to="/press" onClick={() => setOpen(false)}>Press</Link></li>
+        <li><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
       </ul>
-      <div
-        className="hamburger"
-        onClick={() => setOpen((o) => !o)}
-      >
+      <div className="hamburger" onClick={() => setOpen((o) => !o)}>
         <span />
         <span />
         <span />
@@ -26,3 +27,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
