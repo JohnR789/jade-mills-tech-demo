@@ -49,3 +49,9 @@
   }
   .hamburger { display: flex; }
 }
+.hide-on-mobile { display: none; }
+@media (min-width: 901px) {
+  .hide-on-mobile { display: inline-block; }
+  .hamburger { display: none !important; }
+}
+
